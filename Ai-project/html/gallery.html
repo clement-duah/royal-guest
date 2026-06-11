@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View our beautiful hotel gallery including rooms, dining, and facilities at Royal Maricay Hotel in Tanoso, Ghana.">
+    <meta name="title" content="Gallery | Royal Maricay Hotel">
+    <title>Gallery | Royal Maricay Hotel</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <h1 class="logo">Royal Maricay</h1>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="rooms.html" class="nav-link">Rooms</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="https://wa.me/233592017310" class="nav-link nav-cta" target="_blank">WhatsApp</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero gallery-hero">
+        <div class="page-hero-content">
+            <h1>Our Gallery</h1>
+            <p>Explore the beauty of Royal Maricay Hotel</p>
+        </div>
+        <div class="page-hero-overlay"></div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="exterior">Hotel Exterior</button>
+                <button class="filter-btn" data-filter="rooms">Rooms</button>
+                <button class="filter-btn" data-filter="dining">Dining</button>
+                <button class="filter-btn" data-filter="facilities">Facilities</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Hotel Exterior -->
+                <div class="gallery-item exterior" data-category="exterior">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #0F172A 0%, #1a1f3a 100%);">
+                        <span class="image-label">Hotel Entrance</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(0)">🔍</button>
+                </div>
+                <div class="gallery-item exterior" data-category="exterior">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #134e4a 0%, #0d4f47 100%);">
+                        <span class="image-label">Front Gardens</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(1)">🔍</button>
+                </div>
+                <div class="gallery-item exterior" data-category="exterior">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);">
+                        <span class="image-label">Parking Area</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(2)">🔍</button>
+                </div>
+                <div class="gallery-item exterior" data-category="exterior">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #5b21b6 0%, #4c1d95 100%);">
+                        <span class="image-label">Evening Ambiance</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(3)">🔍</button>
+                </div>
+
+                <!-- Rooms -->
+                <div class="gallery-item rooms" data-category="rooms">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);">
+                        <span class="image-label">Deluxe Room</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(4)">🔍</button>
+                </div>
+                <div class="gallery-item rooms" data-category="rooms">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);">
+                        <span class="image-label">Standard Room</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(5)">🔍</button>
+                </div>
+                <div class="gallery-item rooms" data-category="rooms">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);">
+                        <span class="image-label">Executive Suite</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(6)">🔍</button>
+                </div>
+                <div class="gallery-item rooms" data-category="rooms">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #4c0519 0%, #831843 100%);">
+                        <span class="image-label">Room Interior</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(7)">🔍</button>
+                </div>
+
+                <!-- Dining -->
+                <div class="gallery-item dining" data-category="dining">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
+                        <span class="image-label">Restaurant</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(8)">🔍</button>
+                </div>
+                <div class="gallery-item dining" data-category="dining">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%);">
+                        <span class="image-label">Dining Area</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(9)">🔍</button>
+                </div>
+                <div class="gallery-item dining" data-category="dining">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);">
+                        <span class="image-label">Bar Lounge</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(10)">🔍</button>
+                </div>
+                <div class="gallery-item dining" data-category="dining">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);">
+                        <span class="image-label">Breakfast Area</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(11)">🔍</button>
+                </div>
+
+                <!-- Facilities -->
+                <div class="gallery-item facilities" data-category="facilities">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
+                        <span class="image-label">Swimming Area</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(12)">🔍</button>
+                </div>
+                <div class="gallery-item facilities" data-category="facilities">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #22d3ee 0%, #06b6d4 100%);">
+                        <span class="image-label">Fitness Center</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(13)">🔍</button>
+                </div>
+                <div class="gallery-item facilities" data-category="facilities">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);">
+                        <span class="image-label">Conference Room</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(14)">🔍</button>
+                </div>
+                <div class="gallery-item facilities" data-category="facilities">
+                    <div class="gallery-image" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                        <span class="image-label">Lounge Area</span>
+                    </div>
+                    <button class="gallery-zoom" onclick="openLightbox(15)">🔍</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <button class="lightbox-prev" onclick="previousLightbox()">❮</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image" id="lightboxImage"></div>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-next" onclick="nextLightbox()">❯</button>
+    </div>
+
+    <!-- Gallery Description Section -->
+    <section class="gallery-descriptions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Explore Our Property</h2>
+                <p>Take a closer look at what makes Royal Maricay Hotel special</p>
+            </div>
+            
+            <div class="description-grid">
+                <div class="description-card">
+                    <h3>🏢 Hotel Exterior</h3>
+                    <p>Our beautifully designed hotel building features modern architecture with traditional Ghanaian design elements. The well-maintained exterior, lush gardens, and secure parking facilities create a welcoming first impression.</p>
+                </div>
+                <div class="description-card">
+                    <h3>🛏️ Comfortable Rooms</h3>
+                    <p>From cozy Standard rooms to luxurious Executive suites, every room is designed with your comfort in mind. Each room features modern furnishings, quality bedding, air conditioning, and all necessary amenities for a pleasant stay.</p>
+                </div>
+                <div class="description-card">
+                    <h3>🍽️ Dining & Restaurant</h3>
+                    <p>Our on-site restaurant serves delicious local and international cuisine prepared by skilled chefs. The comfortable dining areas and attentive service ensure a memorable dining experience for all our guests.</p>
+                </div>
+                <div class="description-card">
+                    <h3>🏋️ Modern Facilities</h3>
+                    <p>We provide excellent facilities including conference rooms for business meetings, fitness areas, lounge spaces for relaxation, and other amenities designed to make your stay comfortable and productive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section class="virtual-tour">
+        <div class="container">
+            <div class="section-header">
+                <h2>Can't Visit Yet?</h2>
+                <p>Get to know us better through our gallery or arrange a virtual tour</p>
+            </div>
+            <div class="tour-content">
+                <p>Browse through our comprehensive gallery to get a feel for the comfort and elegance of Royal Maricay Hotel. If you'd like a personalized virtual tour or have specific questions about any aspect of our property, don't hesitate to reach out via WhatsApp or contact us directly.</p>
+                <div class="tour-buttons">
+                    <a href="https://wa.me/233592017310?text=I%20would%20like%20to%20schedule%20a%20virtual%20tour%20of%20Royal%20Maricay%20Hotel" class="btn btn-primary" target="_blank">
+                        Request Virtual Tour
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">Get More Information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Impressed by What You've Seen?</h2>
+            <p>Experience the beauty and comfort of Royal Maricay Hotel in person</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/233592017310?text=Hello%20Royal%20Maricay%20Hotel%2C%20I%20would%20like%20to%20make%20a%20booking" class="btn btn-light" target="_blank">
+                    💬 Book Your Stay
+                </a>
+                <a href="contact.html" class="btn btn-light-secondary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Royal Maricay Hotel</h3>
+                    <p>Your preferred destination for comfortable accommodation in Tanoso, Ghana.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank" title="Facebook">f</a>
+                        <a href="https://www.twitter.com" target="_blank" title="Twitter">𝕏</a>
+                        <a href="https://www.instagram.com" target="_blank" title="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📞 +233 35 229 0606</li>
+                        <li>📍 Opposite Tanoso Community Nursing School, Tanoso</li>
+                        <li>💬 <a href="https://wa.me/233592017310" target="_blank">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Reception: 24/7</li>
+                        <li>Restaurant: 7am - 10pm</li>
+                        <li>Breakfast: 7am - 9am</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Royal Maricay Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/233592017310?text=Hello%20Royal%20Maricay%20Hotel%2C%20I%20need%20assistance" class="floating-whatsapp" title="Chat on WhatsApp" target="_blank">
+        💬
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
